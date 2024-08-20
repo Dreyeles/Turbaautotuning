@@ -1,0 +1,247 @@
+/*Inicio mapa ubicanos*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.body{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;}
+/*Fin mapa ubicanos*/
+/*Inicio navbar*/
+.navbar{
+    background-color: #170080;
+    height: 75px;
+    margin: 20px;
+    border-radius: 25px;
+    padding: 0.5rem;
+}
+.nav-link{
+font-size: 16px;
+
+}
+.navbar-brand{
+    display: flex;
+    height: 40px;
+    font-weight: 500;
+    color: #9acd32;
+    font-size: 13px;
+    transition: 0.3s color;
+    text-align: center;
+}
+
+.login-button {
+    background-color: #00ffff;
+    color: white;
+    font-size: 13px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover {
+    background-color: black;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: black;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: black;
+}
+/*Fin navbar*/
+/*Inicio Banner*/
+.homepage{
+    position: relative;
+    height: 99vh;
+    width: 100%;
+    background-image: url(/imagenes/banner_turba.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.contenido-banner{
+    position: relative;
+    color: #ffffff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenido-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.contenido-banner h3 span{
+    font-weight: 600;
+}
+/*FinaL Banner*/
+/*boton contactanos*/
+
+
+.boton-contact{
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid palegreen;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.3s;
+    border-radius: 25px;
+}
+
+.boton-contact:hover{
+    background-color: palegreen;
+}
+
+/*fin de botones*/
+/*fin de banner*/
+
+/*productos*/
+
+.card{
+    font-size: 13;
+    height: 310px;
+    text-align: center;
+    border-radius: 2em;
+    transition: all 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.card:hover{
+    transform: scale(1.15);
+}
+.section-header{
+    text-align:center;
+    padding: 100px;
+    color: #ffffff;
+    text-shadow: 0 5px 10px ;
+    font-size: 50px;
+}
+
+
+.card img{
+    width: 150px;
+    height: 150px;
+}
+
+.card-tittle{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.btn{
+    border-radius: 2em;
+}
+
+section[id]{
+    scroll-margin-top:20px ;
+}
+
+.row h1{
+    text-align:center;
+    padding: 100px;
+    color: #ffffff;
+    text-shadow: 0 5px 10px ;
+    font-size: 50px;
+}
+
+.container-contact {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.nostros-portada{
+    position: relative;
+    height: 99vh;
+    width: 100%;
+    background-image: url(/imagenes/TURBA\ LOCAL\ PORTADA.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+@media(min-width:991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: greenyellow;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+
+}
