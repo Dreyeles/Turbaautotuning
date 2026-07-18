@@ -19,45 +19,6 @@ const isPageActive = (path: string) => {
                 <span>Turba<br>autotuning</span>
             </a>
             
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Turba</h5>
-                    <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class={`nav-link mx-lg-2 text-white ${isPageActive('/')}`} aria-current={pathname === '/' ? 'page' : undefined} href="/">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class={`nav-link mx-lg-2 text-white ${isPageActive('/nosotros')}`} href="/nosotros">Nosotros</a>
-                        </li>
-                        <!-- Menú desplegable para productos, agrupando las categorías -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle mx-lg-2 text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu bg-dark border-secondary" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item text-white hover-glow" href="/pantallas">Pantallas</a></li>
-                                <li><a class="dropdown-item text-white hover-glow" href="/camaras">Cámaras</a></li>
-                                <li><a class="dropdown-item text-white hover-glow" href="/equipo">Equipos de Sonido</a></li>
-                                <li><a class="dropdown-item text-white hover-glow" href="/gps">GPS / Alarmas</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class={`nav-link mx-lg-2 text-white ${isPageActive('/ubicanos')}`} href="/ubicanos">Ubícanos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class={`nav-link mx-lg-2 text-white ${isPageActive('/contactanos')}`} href="/contactanos">Contáctanos</a>
-                        </li>
-                        <li class="nav-item d-lg-none d-flex gap-3 mt-3">
-                            <a class="text-white fs-4" href="https://www.facebook.com/profile.php?id=100083170009043" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
-                            <a class="text-white fs-4" href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
             <!-- Redes sociales visibles en pantallas grandes -->
             <div class="d-none d-lg-flex gap-3 align-items-center me-3">
                 <a class="nav-link text-white p-0 hover-green" href="https://www.facebook.com/profile.php?id=100083170009043" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
@@ -69,6 +30,46 @@ const isPageActive = (path: string) => {
             </button>
         </div>
     </nav>
+
+    <!-- Offcanvas colocado fuera de la navegación para evitar problemas de altura con backdrop-filter -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Turba</h5>
+            <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class={`nav-link mx-lg-2 text-white ${isPageActive('/')}`} aria-current={pathname === '/' ? 'page' : undefined} href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class={`nav-link mx-lg-2 text-white ${isPageActive('/nosotros')}`} href="/nosotros">Nosotros</a>
+                </li>
+                <!-- Menú desplegable para productos, agrupando las categorías -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mx-lg-2 text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Productos
+                    </a>
+                    <ul class="dropdown-menu bg-dark border-secondary" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item text-white hover-glow" href="/pantallas">Pantallas</a></li>
+                        <li><a class="dropdown-item text-white hover-glow" href="/camaras">Cámaras</a></li>
+                        <li><a class="dropdown-item text-white hover-glow" href="/equipo">Equipos de Sonido</a></li>
+                        <li><a class="dropdown-item text-white hover-glow" href="/gps">GPS / Alarmas</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class={`nav-link mx-lg-2 text-white ${isPageActive('/ubicanos')}`} href="/ubicanos">Ubícanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class={`nav-link mx-lg-2 text-white ${isPageActive('/contactanos')}`} href="/contactanos">Contáctanos</a>
+                </li>
+                <li class="nav-item d-lg-none d-flex gap-3 mt-3">
+                    <a class="text-white fs-4" href="https://www.facebook.com/profile.php?id=100083170009043" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+                    <a class="text-white fs-4" href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </header>
 
 <style>
