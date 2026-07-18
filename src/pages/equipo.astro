@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+---
+
+<BaseLayout title="Equipos de Sonido | Turba Autotuning" description="Parlantes de alta fidelidad, componentes, amplificadores y subwoofers para potenciar y definir el audio de tu auto.">
+    
+    <section class="homepage-2" id="banner">
+        <div class="contenido-banner">
+            <h3><span>Sonido de Alta Fidelidad</span>EQUIPOS DE SONIDO</h3>
+        </div>
+    </section>
+
+    <main class="container py-5">
+        <section class="product" id="Productos">
+            <div class="section-header">
+                <h2>Audio y Componentes</h2>
+            </div>
+            
+            <div class="row">
+                <ProductCard 
+                    title="Kit de Componentes Vías Sep." 
+                    image="/imagenes/equipodesonido.jpg" 
+                    description="Incluye 2 parlantes de medios, 2 tweeters externos y crossovers pasivos para un audio cristalino."
+                    buttonText="Consultar por WhatsApp"
+                />
+                <ProductCard 
+                    title="Subwoofer Activo Bajo Asiento" 
+                    image="/imagenes/equipodesonido.jpg" 
+                    description="Bajo plano amplificado de 10 pulgadas. Ahorra espacio situándolo debajo del asiento del conductor."
+                    buttonText="Consultar por WhatsApp"
+                />
+                <ProductCard 
+                    title="Amplificador Digital 4 Canales" 
+                    image="/imagenes/equipodesonido.jpg" 
+                    description="Mini amplificador Clase D de alta eficiencia para potenciar los parlantes originales o componentes."
+                    buttonText="Consultar por WhatsApp"
+                />
+                <ProductCard 
+                    title="Parlantes Coaxiales 6x9" 
+                    image="/imagenes/equipodesonido.jpg" 
+                    description="Parlantes triaxiales de alta potencia ideales para la bandeja trasera del vehículo. Bajos contundentes."
+                    buttonText="Consultar por WhatsApp"
+                />
+            </div>
+        </section>
+    </main>
+</BaseLayout>

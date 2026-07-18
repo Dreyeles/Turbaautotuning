@@ -1,0 +1,94 @@
+---
+const pathname = Astro.url.pathname;
+
+// Determinar qué enlace está activo
+const isPageActive = (path: string) => {
+  if (path === '/' && (pathname === '/' || pathname === '/index.html' || pathname === '')) {
+    return 'active';
+  }
+  return pathname.includes(path) ? 'active' : '';
+};
+---
+
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!-- El logo ahora apunta al inicio de la web, mejorando la usabilidad -->
+            <a class="navbar-brand me-auto" href="/">
+                <img src="/imagenes/logoturba.svg" alt="Turba Autotuning Logo"> 
+                <span>Turba<br>autotuning</span>
+            </a>
+            
+            <div class="offcanvas offcanvas-end bg-black" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Turba</h5>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class={`nav-link mx-lg-2 text-white ${isPageActive('/')}`} aria-current={pathname === '/' ? 'page' : undefined} href="/">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class={`nav-link mx-lg-2 text-white ${isPageActive('/nosotros')}`} href="/nosotros">Nosotros</a>
+                        </li>
+                        <!-- Menú desplegable para productos, agrupando las categorías -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mx-lg-2 text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu bg-dark border-secondary" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-white hover-glow" href="/pantallas">Pantallas</a></li>
+                                <li><a class="dropdown-item text-white hover-glow" href="/camaras">Cámaras</a></li>
+                                <li><a class="dropdown-item text-white hover-glow" href="/equipo">Equipos de Sonido</a></li>
+                                <li><a class="dropdown-item text-white hover-glow" href="/gps">GPS / Alarmas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class={`nav-link mx-lg-2 text-white ${isPageActive('/ubicanos')}`} href="/ubicanos">Ubícanos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class={`nav-link mx-lg-2 text-white ${isPageActive('/contactanos')}`} href="/contactanos">Contáctanos</a>
+                        </li>
+                        <li class="nav-item d-lg-none d-flex gap-3 mt-3">
+                            <a class="text-white fs-4" href="https://www.facebook.com/profile.php?id=100083170009043" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+                            <a class="text-white fs-4" href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Redes sociales visibles en pantallas grandes -->
+            <div class="d-none d-lg-flex gap-3 align-items-center me-3">
+                <a class="nav-link text-white p-0 hover-green" href="https://www.facebook.com/profile.php?id=100083170009043" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+                <a class="nav-link text-white p-0 hover-green" href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-5"></i></a>
+            </div>
+
+            <button class="navbar-toggler pe-0 navbar-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<style>
+    .dropdown-menu {
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        padding: 0.5rem;
+    }
+    .dropdown-item {
+        border-radius: 8px;
+        padding: 8px 16px;
+        transition: all 0.2s;
+    }
+    .dropdown-item:hover {
+        background-color: var(--accent-glow);
+        color: var(--bg-primary) !important;
+        font-weight: 600;
+    }
+    .hover-green:hover {
+        color: var(--accent-glow) !important;
+        filter: drop-shadow(0 0 5px rgba(0, 255, 136, 0.5));
+    }
+</style>

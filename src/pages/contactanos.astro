@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contáctanos | Turba Autotuning" description="Envíanos un mensaje para cotizar pantallas multimedia, equipos de sonido o cámaras para tu auto. Respondemos en menos de 24 horas.">
+    <!-- Banner de Encabezado Corto -->
+    <section class="homepage-2" id="banner">
+        <div class="contenido-banner">
+            <h3><span>¿Tienes dudas?</span>CONTÁCTANOS</h3>
+        </div>
+    </section>
+
+    <main class="container py-5">
+        <section class="row py-5 justify-content-center">
+            <div class="col-lg-5 mb-5 mb-lg-0 align-self-center">
+                <h1 class="display-5 fw-bold mb-4">¿Listo para mejorar tu auto?</h1>
+                <p class="fs-5 text-secondary mb-4">
+                    Rellena el formulario de la derecha o contáctanos directamente a través de nuestras redes sociales. Estaremos encantados de asesorarte y brindarte un presupuesto a la medida para tu auto.
+                </p>
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-chat-dots-fill text-success fs-3 me-3"></i>
+                    <div>
+                        <h5 class="mb-0 fw-bold">Chat de WhatsApp</h5>
+                        <a href="https://wa.me/51999999999?text=Hola%20Turba%20Autotuning,%20me%20gustar%C3%ADa%20hacer%20una%20consulta" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-success fw-semibold">
+                            Escríbenos al +51 999 999 999
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-facebook text-primary fs-3 me-3"></i>
+                    <div>
+                        <h5 class="mb-0 fw-bold">Facebook Oficial</h5>
+                        <a href="https://www.facebook.com/profile.php?id=100083170009043" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-primary fw-semibold">
+                            Visita nuestra página de Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-7">
+                <!-- Formulario de Contacto (Web3Forms) -->
+                <div class="container-contact shadow-lg m-0 w-100">
+                    <h2>Formulario de Consulta</h2>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Clave pública de Web3Forms. El usuario puede cambiarla para que le lleguen a su correo -->
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+                        <input type="hidden" name="subject" value="Nuevo Mensaje de Contacto - Turba Autotuning" />
+                        <input type="checkbox" name="botcheck" class="d-none" />
+
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto">Asunto de consulta:</label>
+                            <input type="text" id="asunto" name="asunto" placeholder="Ej. Cotización de Pantalla para Toyota" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Describe brevemente lo que necesitas..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</BaseLayout>

@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Ubícanos | Turba Autotuning" description="Encuentra nuestro taller y tienda física. Visítanos para recibir asesoría personalizada sobre pantallas y sonido multimedia.">
+    <!-- Banner de Encabezado Corto -->
+    <section class="homepage-2" id="banner">
+        <div class="contenido-banner">
+            <h3><span>¿Dónde estamos?</span>UBÍCANOS</h3>
+        </div>
+    </section>
+
+    <main class="container py-5">
+        <section class="row py-5 align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <h1 class="display-5 fw-bold mb-4">Visita Nuestro Taller Especializado</h1>
+                <p class="fs-5 text-secondary">
+                    Estamos ubicados en una zona estratégica para poder atender la instalación de tus componentes de tuning con total comodidad y seguridad.
+                </p>
+                <div class="mt-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-geo-alt-fill text-danger fs-3 me-3"></i>
+                        <div>
+                            <h5 class="mb-0 fw-bold">Dirección</h5>
+                            <p class="text-secondary mb-0">Mecánica Electrónica Automotriz, Lima, Perú</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-clock-fill text-warning fs-3 me-3"></i>
+                        <div>
+                            <h5 class="mb-0 fw-bold">Horarios de Atención</h5>
+                            <p class="text-secondary mb-0">Lunes a Sábado: 9:00 AM - 7:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-telephone-fill text-success fs-3 me-3"></i>
+                        <div>
+                            <h5 class="mb-0 fw-bold">Teléfono de Citas</h5>
+                            <p class="text-secondary mb-0">+51 999 999 999</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <a href="https://maps.google.com/?q=Mec%C3%A1nica+Electr%C3%B3nica+AUTOMOTRIZ" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-lg rounded-pill px-4">
+                        <i class="bi bi-map-fill me-2"></i> Abrir en Google Maps
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="map-container rounded-4 overflow-hidden shadow-lg border border-secondary">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d410.2385292760834!2d-77.0779303276591!3d-11.983591304617695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cf0021d3a5f5%3A0xe77558e41b6e2a23!2sMec%C3%A1nica%20Electr%C3%B3nica%20AUTOMOTRIZ!5e0!3m2!1ses-419!2spe!4v1722828182272!5m2!1ses-419!2spe"
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación Google Maps de Turba Autotuning">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+</BaseLayout>

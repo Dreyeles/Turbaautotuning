@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+---
+
+<BaseLayout title="Pantallas Multimedia | Turba Autotuning" description="Variedad de pantallas multimedia IPS con Android, CarPlay y Android Auto, a la medida para todo tipo de consolas de vehículos.">
+    
+    <section class="homepage-2" id="banner">
+        <div class="contenido-banner">
+            <h3><span>Consolas a la Medida</span>PANTALLAS MULTIMEDIA</h3>
+        </div>
+    </section>
+
+    <main class="container py-5">
+        <section class="product" id="Productos">
+            <div class="section-header">
+                <h2>Catálogo de Pantallas IPS</h2>
+            </div>
+            
+            <div class="row">
+                <ProductCard 
+                    title="Pantalla IPS Android 9\"" 
+                    image="/imagenes/PANTALLA IPS.webp" 
+                    description="2GB RAM + 32GB Almacenamiento. Compatible con Apple CarPlay y Android Auto de forma inalámbrica."
+                    buttonText="Consultar por WhatsApp"
+                />
+                <ProductCard 
+                    title="Pantalla IPS Android Pro 10\"" 
+                    image="/imagenes/PANTALLA IPS.webp" 
+                    description="4GB RAM + 64GB Almacenamiento, procesador Octa-Core y ecualizador DSP integrado de 32 bandas."
+                    buttonText="Consultar por WhatsApp"
+                />
+                <ProductCard 
+                    title="Pantalla Retráctil 1 DIN" 
+                    image="/imagenes/PANTALLA IPS.webp" 
+                    description="Pantalla motorizada de 7 pulgadas para vehículos clásicos con ranura de radio tradicional de un solo din."
+                    buttonText="Consultar por WhatsApp"
+                />
+                <ProductCard 
+                    title="Pantalla Doble DIN Universal" 
+                    image="/imagenes/PANTALLA IPS.webp" 
+                    description="Diseño universal de 7 pulgadas con enlace espejo, bluetooth manos libres y entrada directa para cámara."
+                    buttonText="Consultar por WhatsApp"
+                />
+            </div>
+        </section>
+    </main>
+</BaseLayout>

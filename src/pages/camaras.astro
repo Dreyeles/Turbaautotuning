@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+---
+
+<BaseLayout title="Cámaras de Retroceso | Turba Autotuning" description="Encuentra cámaras de retroceso de alta definición, con visión nocturna y líneas de guía dinámicas para estacionar de forma segura.">
+    
+    <section class="homepage-2" id="banner">
+        <div class="contenido-banner">
+            <h3><span>Asistencia de Estacionamiento</span>CÁMARAS DE RETROCESO</h3>
+        </div>
+    </section>
+
+    <main class="container py-5">
+        <section class="product" id="Productos">
+            <div class="section-header">
+                <h2>Cámaras HD y Asistencia</h2>
+            </div>
+            
+            <div class="row">
+                <ProductCard 
+                    title="Cámara de Retroceso FHD AHD" 
+                    image="/imagenes/CAMARAS DE RETOCESO.jpeg" 
+                    description="Visión nocturna a color, ángulo ultra-ancho de 170 grados e impermeabilidad IP68."
+                    buttonText="Consultar por WhatsApp"
+                />
+                <ProductCard 
+                    title="Cámara con Líneas Dinámicas" 
+                    image="/imagenes/CAMARAS DE RETOCESO.jpeg" 
+                    description="Las líneas de estacionamiento giran automáticamente según el movimiento del vehículo."
+                    buttonText="Consultar por WhatsApp"
+                />
+                <ProductCard 
+                    title="Cámara Tipo Ojo de Pez" 
+                    image="/imagenes/CAMARAS DE RETOCESO.jpeg" 
+                    description="Máxima cobertura angular de 180° para evitar cualquier punto ciego al retroceder."
+                    buttonText="Consultar por WhatsApp"
+                />
+                <ProductCard 
+                    title="Cámara de Placa Vehicular" 
+                    image="/imagenes/CAMARAS DE RETOCESO.jpeg" 
+                    description="Se instala de forma discreta sobre el portaplaca del auto sin perforar la carrocería."
+                    buttonText="Consultar por WhatsApp"
+                />
+            </div>
+        </section>
+    </main>
+</BaseLayout>

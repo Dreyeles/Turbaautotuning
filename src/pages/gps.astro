@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+---
+
+<BaseLayout title="Sistemas GPS y Alarmas | Turba Autotuning" description="Alarmas de presencia, cierre centralizado y rastreadores satelitales GPS con corte de motor en tiempo real.">
+    
+    <section class="homepage-2" id="banner">
+        <div class="contenido-banner">
+            <h3><span>Seguridad y Monitoreo</span>GPS Y ALARMAS</h3>
+        </div>
+    </section>
+
+    <main class="container py-5">
+        <section class="product" id="Productos">
+            <div class="section-header">
+                <h2>Rastreo y Seguridad Activa</h2>
+            </div>
+            
+            <div class="row">
+                <ProductCard 
+                    title="Rastreador GPS Tracker 4G" 
+                    image="/imagenes/GPS.jpeg" 
+                    description="Localización en tiempo real vía App móvil. Permite cortar la corriente o el combustible a distancia por SMS."
+                    buttonText="Consultar por WhatsApp"
+                />
+                <ProductCard 
+                    title="Alarma de Presencia Inteligente" 
+                    image="/imagenes/GPS.jpeg" 
+                    description="Apagado automático del motor en caso de asalto por alejamiento del llavero sensor de proximidad."
+                    buttonText="Consultar por WhatsApp"
+                />
+                <ProductCard 
+                    title="Kit Alarma con Cierre Centralizado" 
+                    image="/imagenes/GPS.jpeg" 
+                    description="Moderniza tu auto con seguro de puertas automático por control remoto, sensor de impacto y sirena."
+                    buttonText="Consultar por WhatsApp"
+                />
+                <ProductCard 
+                    title="GPS Tracker con Micrófono Espía" 
+                    image="/imagenes/GPS.jpeg" 
+                    description="Permite realizar una llamada silenciosa al dispositivo para escuchar el audio interno de la cabina en tiempo real."
+                    buttonText="Consultar por WhatsApp"
+                />
+            </div>
+        </section>
+    </main>
+</BaseLayout>
