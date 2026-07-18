@@ -21,15 +21,18 @@ import ProductCard from '../components/ProductCard.astro';
             <div class="col-md-7 mb-4 mb-md-0">
                 <h2 class="display-4 fw-bold">Nosotros <span class="fs-4 text-muted d-block mt-2">Expertos en pantallas multimedia y sonido vehicular</span></h2>
                 <p class="fs-5 text-secondary mt-3">
-                    En <strong>Turba Autotuning</strong>, somos un equipo apasionado de expertos en tecnología y diseño dedicados a transformar la experiencia dentro de tu vehículo. Nuestra misión es ofrecerte las mejores soluciones multimedia, desde pantallas personalizadas hasta sistemas de sonido premium. Te ayudamos a llevar la conectividad y el entretenimiento a otro nivel.
+                    En <strong>Turba Autotuning</strong>, somos un equipo apasionado de técnicos y especialistas dedicados a transformar y equipar la electrónica de tu vehículo. Importamos e instalamos consolas multimedia de alta gama, sistemas de sonido premium y soluciones de seguridad activa a medida.
                 </p>
-                <p class="fs-6 text-secondary">
-                    ¡Gracias por confiar en nosotros para mejorar tu conducción! 🌟
+                <p class="fs-6 text-secondary mb-4">
+                    Llevamos la conectividad, el entretenimiento y el confort de conducción a otro nivel con un servicio garantizado de primer nivel.
                 </p>
+                <a href={`${import.meta.env.BASE_URL}nosotros`} class="btn btn-outline-success rounded-pill px-4 py-2 fw-semibold">
+                    <i class="bi bi-info-circle-fill me-2"></i> Conoce más sobre nosotros
+                </a>
             </div>
             <div class="col-md-5">
-                <div class="ratio ratio-16x9 rounded overflow-hidden shadow-lg border border-secondary">
-                    <iframe src="https://www.youtube.com/embed/uGYSVuG6KeY?autoplay=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="rounded-4 overflow-hidden shadow-lg border border-secondary hover-zoom-container">
+                    <img src={`${import.meta.env.BASE_URL}imagenes/TURBA LOCAL PORTADA.png`} alt="Fachada de Turba Autotuning" class="img-fluid w-100 object-fit-cover" style="height: 300px;">
                 </div>
             </div>
         </section>
@@ -39,24 +42,44 @@ import ProductCard from '../components/ProductCard.astro';
             <div class="section-header">
                 <h2>Trabajos Destacados</h2>
             </div>
-            <div id="carouselExampleSlidesOnly" class="carousel slide rounded-4 overflow-hidden shadow-lg border border-secondary" data-bs-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade rounded-4 overflow-hidden shadow-lg border border-secondary" data-bs-ride="carousel" data-bs-pause="hover">
+                <!-- Indicadores (Puntos de control inferior) -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Trabajo 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Trabajo 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Trabajo 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Trabajo 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Trabajo 5"></button>
+                </div>
+
+                <!-- Diapositivas (Slides) -->
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="2500">
-                        <img src={`${import.meta.env.BASE_URL}imagenes/c1.jpg`} class="d-block w-100 carousel-img" alt="Instalación de consola multimedia Turba">
+                    <div class="carousel-item active" data-bs-interval="3500">
+                        <img src={`${import.meta.env.BASE_URL}imagenes/prueba_pan1.png`} class="d-block w-100 carousel-img" alt="Instalación de consola multimedia Turba">
                     </div>
-                    <div class="carousel-item" data-bs-interval="2500">
-                        <img src={`${import.meta.env.BASE_URL}imagenes/c2.jpg`} class="d-block w-100 carousel-img" alt="Pantalla IPS instalada en vehículo">
+                    <div class="carousel-item" data-bs-interval="3500">
+                        <img src={`${import.meta.env.BASE_URL}imagenes/prueba_pan2.png`} class="d-block w-100 carousel-img" alt="Pantalla IPS instalada en vehículo">
                     </div>
-                    <div class="carousel-item" data-bs-interval="2500">
-                        <img src={`${import.meta.env.BASE_URL}imagenes/c3.jpg`} class="d-block w-100 carousel-img" alt="Consola tuning a medida">
+                    <div class="carousel-item" data-bs-interval="3500">
+                        <img src={`${import.meta.env.BASE_URL}imagenes/prueba_pan3.png`} class="d-block w-100 carousel-img" alt="Consola tuning a medida">
                     </div>
-                    <div class="carousel-item" data-bs-interval="2500">
-                        <img src={`${import.meta.env.BASE_URL}imagenes/c4.jpg`} class="d-block w-100 carousel-img" alt="Equipo de sonido vehicular premium">
+                    <div class="carousel-item" data-bs-interval="3500">
+                        <img src={`${import.meta.env.BASE_URL}imagenes/prueba_pan4.png`} class="d-block w-100 carousel-img" alt="Equipo de sonido vehicular premium">
                     </div>
-                    <div class="carousel-item" data-bs-interval="2500">
-                        <img src={`${import.meta.env.BASE_URL}imagenes/c5.jpg`} class="d-block w-100 carousel-img" alt="Cámara de retroceso instalada">
+                    <div class="carousel-item" data-bs-interval="3500">
+                        <img src={`${import.meta.env.BASE_URL}imagenes/prueba_pan5.png`} class="d-block w-100 carousel-img" alt="Cámara de retroceso instalada">
                     </div>
                 </div>
+
+                <!-- Controles laterales (Flechas de navegación) -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
         </section>
 
@@ -124,48 +147,88 @@ import ProductCard from '../components/ProductCard.astro';
             <div class="section-header">
                 <h2>Ubícanos</h2>
             </div>
-            <!-- Mapa interactivo en contenedor fluido y responsivo -->
-            <div class="map-container rounded-4 overflow-hidden shadow">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d410.2385292760834!2d-77.0779303276591!3d-11.983591304617695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cf0021d3a5f5%3A0xe77558e41b6e2a23!2sMec%C3%A1nica%20Electr%C3%B3nica%20AUTOMOTRIZ!5e0!3m2!1ses-419!2spe!4v1722828182272!5m2!1ses-419!2spe"
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Ubicación de Turba Autotuning">
-                </iframe>
+            
+            <div class="row g-4 align-items-stretch">
+                <!-- Columna Izquierda: Tarjeta de Información -->
+                <div class="col-lg-5">
+                    <div class="info-card h-100 p-4 p-md-5 rounded-4 shadow d-flex flex-column justify-content-between">
+                        <div>
+                            <h3 class="fw-bold mb-3 text-white">¡Visita Nuestro Taller!</h3>
+                            <p class="text-secondary mb-4">
+                                Ven y recibe asesoramiento personalizado de nuestros expertos en instalación de consolas multimedia y sonido de alta fidelidad.
+                            </p>
+                            
+                            <!-- Lista de Información -->
+                            <div class="d-flex flex-column gap-4">
+                                <div class="d-flex align-items-start info-item">
+                                    <i class="bi bi-geo-alt-fill text-secondary fs-5 me-3"></i>
+                                    <div>
+                                        <h5 class="mb-0 text-white fw-semibold">Dirección</h5>
+                                        <p class="text-secondary mb-0">Mecánica Electrónica Automotriz, Lima, Perú</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex align-items-start info-item">
+                                    <i class="bi bi-clock-fill text-secondary fs-5 me-3"></i>
+                                    <div>
+                                        <h5 class="mb-0 text-white fw-semibold">Horario de Atención</h5>
+                                        <p class="text-secondary mb-0">Lunes a Sábado: 9:00 AM - 7:00 PM</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex align-items-start info-item">
+                                    <i class="bi bi-telephone-fill text-secondary fs-5 me-3"></i>
+                                    <div>
+                                        <h5 class="mb-0 text-white fw-semibold">Teléfono de Citas</h5>
+                                        <p class="text-secondary mb-0">+51 999 999 999</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Botón de GPS -->
+                        <div class="mt-4 pt-2">
+                            <a href={`${import.meta.env.BASE_URL}ubicanos`} class="btn btn-outline-success w-100 rounded-pill py-3 fw-semibold">
+                                <i class="bi bi-map-fill me-2"></i> Ver Mapa y Cómo Llegar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Imagen del Taller / Local -->
+                <div class="col-lg-7">
+                    <div class="rounded-4 overflow-hidden shadow-lg border border-secondary h-100" style="position: relative; min-height: 380px;">
+                        <img src={`${import.meta.env.BASE_URL}imagenes/taller_front.png`} alt="Taller de Turba Autotuning" class="w-100 h-100 object-fit-cover" style="position: absolute; top:0; left:0;">
+                        <div class="overlay-gradient d-flex align-items-end p-4 h-100" style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to top, rgba(11,9,20,0.85) 0%, rgba(11,9,20,0) 60%);">
+                            <div>
+                                <h4 class="text-white fw-bold mb-1">Taller de Instalación Profesional</h4>
+                                <p class="text-secondary mb-0 small">Ambiente seguro, cerrado y monitoreado para tu vehículo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Formulario de Contacto (Web3Forms) -->
-        <section class="py-4" id="contactanos">
-            <div class="container-contact shadow-lg">
-                <h2>Contáctanos</h2>
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <!-- Clave pública de Web3Forms. El usuario puede cambiarla para que le lleguen a su correo -->
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-                    <input type="hidden" name="subject" value="Nuevo Mensaje de Contacto - Turba Autotuning" />
-                    <input type="checkbox" name="botcheck" class="d-none" />
-
-                    <div class="form-group">
-                        <label for="nombre">Nombre Completo:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="asunto">Asunto de consulta:</label>
-                        <input type="text" id="asunto" name="asunto" placeholder="Ej. Cotización de Pantalla para Toyota" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" placeholder="Describe brevemente lo que necesitas..." required></textarea>
-                    </div>
+        <!-- Sección de Contacto Rápido / Llamada a la Acción -->
+        <section class="py-5" id="contactanos">
+            <div class="info-card p-4 p-md-5 rounded-4 shadow text-center border border-secondary">
+                <h2 class="display-6 fw-bold text-white mb-3">¿Listo para mejorar tu auto?</h2>
+                <p class="fs-5 text-secondary mx-auto mb-4" style="max-width: 700px;">
+                    Cotiza hoy mismo la instalación de tu consola multimedia, sonido premium o equipamiento de seguridad. ¡Nuestros asesores expertos te responderán de inmediato!
+                </p>
+                
+                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mt-4">
+                    <!-- Botón WhatsApp -->
+                    <a href="https://wa.me/51999999999?text=Hola%20Turba%20Autotuning,%20me%20gustar%C3%ADa%20hacer%20una%20consulta" target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-5 py-3 fw-bold shadow-lg d-inline-flex align-items-center">
+                        <i class="bi bi-whatsapp fs-5 me-2"></i> Escríbenos por WhatsApp
+                    </a>
                     
-                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
-                </form>
+                    <!-- Botón Correo -->
+                    <a href={`${import.meta.env.BASE_URL}contactanos`} class="btn btn-outline-light rounded-pill px-5 py-3 fw-bold d-inline-flex align-items-center">
+                        <i class="bi bi-envelope-fill fs-5 me-2"></i> Enviar un Mensaje por Correo
+                    </a>
+                </div>
             </div>
         </section>
 

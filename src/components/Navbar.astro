@@ -14,10 +14,40 @@ const isPageActive = (path: string) => {
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <!-- El logo ahora apunta al inicio de la web, mejorando la usabilidad -->
-            <a class="navbar-brand me-auto" href={import.meta.env.BASE_URL}>
+            <a class="navbar-brand" href={import.meta.env.BASE_URL}>
                 <img src={`${import.meta.env.BASE_URL}imagenes/logoturba.svg`} alt="Turba Autotuning Logo"> 
                 <span>Turba<br>autotuning</span>
             </a>
+            
+            <!-- Menú de navegación horizontal para Desktop (oculto en móviles) -->
+            <div class="d-none d-lg-flex align-items-center justify-content-center flex-grow-1">
+                <ul class="navbar-nav flex-row gap-2">
+                    <li class="nav-item">
+                        <a class={`nav-link mx-2 text-white ${isPageActive('/')}`} href={import.meta.env.BASE_URL}>Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class={`nav-link mx-2 text-white ${isPageActive('/nosotros')}`} href={`${import.meta.env.BASE_URL}nosotros`}>Nosotros</a>
+                    </li>
+                    <!-- Menú desplegable para productos -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mx-2 text-white" href="#" id="navbarDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu bg-dark border-secondary" aria-labelledby="navbarDropdownDesktop">
+                            <li><a class="dropdown-item text-white hover-glow" href={`${import.meta.env.BASE_URL}pantallas`}>Pantallas</a></li>
+                            <li><a class="dropdown-item text-white hover-glow" href={`${import.meta.env.BASE_URL}camaras`}>Cámaras</a></li>
+                            <li><a class="dropdown-item text-white hover-glow" href={`${import.meta.env.BASE_URL}equipo`}>Equipos de Sonido</a></li>
+                            <li><a class="dropdown-item text-white hover-glow" href={`${import.meta.env.BASE_URL}gps`}>GPS / Alarmas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class={`nav-link mx-2 text-white ${isPageActive('/ubicanos')}`} href={`${import.meta.env.BASE_URL}ubicanos`}>Ubícanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class={`nav-link mx-2 text-white ${isPageActive('/contactanos')}`} href={`${import.meta.env.BASE_URL}contactanos`}>Contáctanos</a>
+                    </li>
+                </ul>
+            </div>
             
             <!-- Redes sociales visibles en pantallas grandes -->
             <div class="d-none d-lg-flex gap-3 align-items-center me-3">
